@@ -7,8 +7,7 @@ def mySqrt(x):
     
     while(left<=right):
         mid = left + (right-left) // 2
-        
-        if mid == x // mid:
+        if mid*mid == x // mid:
             return mid
         elif mid > x // mid:
             right = mid - 1
