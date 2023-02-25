@@ -4,5 +4,3 @@ def findInsertPosition(nums,target):
     print(nums.index(target))
     
 findInsertPosition([1,2,31,2321,1,12],19)
-
-    
