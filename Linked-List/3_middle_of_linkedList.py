@@ -18,15 +18,19 @@ class Linkedlist:
         print("Data Inserted at the Start")
         
     def displayElements(self):
-        if self.head == None:
-            print("Empty LinkedList")
-        else:
-            temp = self.head
-            while temp is not None:
-                print(temp.data)
-                temp = temp.next
+        curr = self.head
+        forward = curr.next
+        print(forward.data)
+        
+        # if self.head == None:
+        #     print("Empty LinkedList")
+        # else:
+        #     temp = self.head
+        #     while temp is not None:
+        #         print(temp.data)
+        #         temp = temp.next
             
-    def lengthOfList(self):
+    def middleOfLinkedList(self):
         count = 0
         curr = self.head
         while(curr is not None):
@@ -49,7 +53,6 @@ mylist.insert_at_beginning(10)
 mylist.insert_at_beginning(20)
 mylist.insert_at_beginning(30)
 mylist.insert_at_beginning(40)
-mylist.insert_at_beginning(40)
+mylist.insert_at_beginning(12)
 
 mylist.displayElements()
-mylist.lengthOfList()
