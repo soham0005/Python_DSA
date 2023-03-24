@@ -36,7 +36,15 @@ class Linkedlist:
             curr.next = prev
             prev = curr
             curr = forward
-        return prev
+        
+        print("List is Reversed..Now will print the list")
+        temp = prev
+        
+        while(temp is not None):
+            print(temp.data)
+            temp = temp.next
+    
+    
                    
     
     
@@ -55,3 +63,4 @@ mylist.insert_at_beginning(20)
 mylist.insert_at_beginning(30)
 mylist.insert_at_beginning(40)
 mylist.displayElements()
+mylist.reverseLinkedList()
