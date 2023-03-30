@@ -15,17 +15,19 @@ class LinkedList:
  
  
     def addNumbers(self,l1,l2):
-        tempArray1 = []
-        tempArray2 = []
-        temp = l1
-        while temp:
-            tempArray1.append(temp.val)
-            temp = temp.next
-        tempArray1 = tempArray1[::-1]
-        temp = l2
-        while temp:
-            tempArray2.append(temp.val)
-            temp = temp.next
-        tempArray2 = tempArray2[::-1]
+        dummy = Node()
+        curr = dummy
+        carry = 0
         
-            
+        while l1 or l2 or carry:
+            val1  = l1.val if l1 else 0
+            val2  = l2.val if l2 else 0
+            result = val1 + val2 + carry
+            carry = result // 10
+            result = result % 10
+            curr.next  = Node(result)
+
+            curr = curr.next
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+        return dummy.next
